@@ -2,10 +2,7 @@ package xbc.tut.springbootjpa.dao;
 
 import java.util.List;
 import java.util.Optional;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.Repository;
 import xbc.tut.springbootjpa.model.Course;
 
 public interface CourseRepo extends JpaRepository<Course, Integer> {

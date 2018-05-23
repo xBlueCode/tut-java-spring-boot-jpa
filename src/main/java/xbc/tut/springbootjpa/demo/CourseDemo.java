@@ -1,6 +1,5 @@
 package xbc.tut.springbootjpa.demo;
 
-import java.util.Comparator;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.Scanner;
@@ -13,7 +12,7 @@ import xbc.tut.springbootjpa.service.CourseService;
 public class CourseDemo implements Demo {
 
   @Autowired
-  private CourseService courseService ; //= new CourseServiceImp();
+  private CourseService courseService ;
 
   private Scanner scanner = new Scanner(System.in);
 
@@ -125,12 +124,7 @@ public class CourseDemo implements Demo {
     System.out.println("List of Courses");
     courseService.getAllOrderByVolume().stream()
         .filter(Objects::nonNull)
-        //.sorted(Comparator.comparing(Course::getVolume))
         .forEach(System.out::println);
-
-//    System.out.print("Course: ");
-//    String courseLabel = scanner.next();
-//    System.out.println(courseService.getCourseByLabel(courseLabel));
   }
 
 }
